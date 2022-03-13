@@ -1,0 +1,17 @@
+.title {
+  &-small {
+    letter-spacing: 0.5rem;
+    font-size: 1.7rem;
+    margin-top: 3rem;
+  }
+}
+
+.text {
+  &-primary {
+    color: var(--light);
+  }
+}
+
+h3 span {
+  font-size: 1.2rem;
+}
