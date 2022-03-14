@@ -10,6 +10,7 @@
   grid:
     "picture header" auto
     "aside main" 1fr
+    "footer footer" auto
     / 350px auto;
 
   @include xs {
@@ -267,10 +268,18 @@ main {
 
   .ayera {
     grid-area: ayera;
+    &:hover {
+      opacity: 0.8;
+      transform: scale(0.9);
+    }
   }
 
   .podcast {
     grid-area: podcast;
+    &:hover {
+      opacity: 0.8;
+      transform: scale(0.9);
+    }
   }
 
   .ehg {
@@ -287,6 +296,10 @@ main {
 
   .cigalon {
     grid-area: cigalon;
+    &:hover {
+      opacity: 0.8;
+      transform: scale(0.9);
+    }
   }
 
   article {
@@ -324,6 +337,67 @@ main {
     h5 {
       color: #666;
       font-style: italic;
+    }
+  }
+}
+
+///////////////////////////////////// FOOTER ///////////////////////
+
+footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 2rem;
+  @include xs {
+    padding: 2rem 1.5rem;
+  }
+  background: var(--text);
+  h2 {
+    margin-bottom: 3rem;
+  }
+  form {
+    display: flex;
+    align-items: center;
+    .prefix,
+    .postfix {
+      background: linear-gradient(to right, var(--dark), var(--light));
+      padding: 1rem 2rem;
+      color: white;
+      font-size: 2rem;
+    }
+    .prefix {
+      border-top-left-radius: 0.5rem;
+      border-bottom-left-radius: 0.5rem;
+    }
+    button {
+      background: var(--text);
+      border: 0;
+      cursor: pointer;
+      transition: all 0.2s;
+      &:hover {
+        opacity: 0.8;
+      }
+      .postfix {
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+      }
+    }
+    input {
+      outline: 0;
+      border: 0;
+      min-width: 400px;
+      @include xs {
+        min-width: 200px;
+      }
+      padding: 1rem 2rem;
+      line-height: 2rem;
+      &::placeholder {
+        color: var(--text);
+      }
     }
   }
 }

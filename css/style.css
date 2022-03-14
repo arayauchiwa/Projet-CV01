@@ -101,7 +101,7 @@ h3 span {
 .grid-container {
   display: grid;
   min-height: 100vh;
-  grid: "picture header" auto "aside main" 1fr/350px auto;
+  grid: "picture header" auto "aside main" 1fr "footer footer" auto/350px auto;
 }
 @media (max-width: 480px) {
   .grid-container {
@@ -319,8 +319,16 @@ main h2 {
 .experiences-professionnelles .ayera {
   grid-area: ayera;
 }
+.experiences-professionnelles .ayera:hover {
+  opacity: 0.8;
+  transform: scale(0.9);
+}
 .experiences-professionnelles .podcast {
   grid-area: podcast;
+}
+.experiences-professionnelles .podcast:hover {
+  opacity: 0.8;
+  transform: scale(0.9);
 }
 .experiences-professionnelles .ehg {
   grid-area: ehg;
@@ -333,6 +341,10 @@ main h2 {
 }
 .experiences-professionnelles .cigalon {
   grid-area: cigalon;
+}
+.experiences-professionnelles .cigalon:hover {
+  opacity: 0.8;
+  transform: scale(0.9);
 }
 .experiences-professionnelles article {
   display: flex;
@@ -364,6 +376,69 @@ main h2 {
 .experiences-professionnelles article h5 {
   color: #666;
   font-style: italic;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 2rem;
+  background: var(--text);
+}
+@media (max-width: 480px) {
+  footer {
+    padding: 2rem 1.5rem;
+  }
+}
+footer h2 {
+  margin-bottom: 3rem;
+}
+footer form {
+  display: flex;
+  align-items: center;
+}
+footer form .prefix,
+footer form .postfix {
+  background: linear-gradient(to right, var(--dark), var(--light));
+  padding: 1rem 2rem;
+  color: white;
+  font-size: 2rem;
+}
+footer form .prefix {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+footer form button {
+  background: var(--text);
+  border: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+footer form button:hover {
+  opacity: 0.8;
+}
+footer form button .postfix {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+footer form input {
+  outline: 0;
+  border: 0;
+  min-width: 400px;
+  padding: 1rem 2rem;
+  line-height: 2rem;
+}
+@media (max-width: 480px) {
+  footer form input {
+    min-width: 200px;
+  }
+}
+footer form input::placeholder {
+  color: var(--text);
 }
 
 /*# sourceMappingURL=style.css.map */
