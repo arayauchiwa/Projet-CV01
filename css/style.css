@@ -198,11 +198,35 @@ aside p {
   margin-bottom: 1.2rem;
   font-style: italic;
 }
+aside .francais {
+  padding: 1rem;
+}
+aside .francais:hover {
+  background: #eeecec;
+}
+aside .english {
+  padding: 1rem;
+}
+aside .english:hover {
+  background: #eeecec;
+}
 aside .coursera {
   margin-bottom: 0;
 }
 aside .coursera:nth-child(6) {
   margin-bottom: 1.2rem;
+}
+aside .html:hover {
+  transition: all 0.2s;
+  color: #e34d26;
+}
+aside .scss:hover {
+  color: #264de3;
+  transition: all 0.2s;
+}
+aside .js:hover {
+  color: #f6df1d;
+  transition: all 0.2s;
 }
 aside .bar-skill {
   margin: 2rem 0;
@@ -226,6 +250,14 @@ aside .bar-skill .bar-skill-scss-progress {
   width: 65%;
   background: var(--light);
 }
+aside .bar-skill .bar-skill-js-progress {
+  position: absolute;
+  height: 5px;
+  top: 0;
+  left: 0;
+  width: 15%;
+  background: var(--light);
+}
 aside .bar-skill .bar-skill-html-dot {
   position: absolute;
   height: 10px;
@@ -241,6 +273,15 @@ aside .bar-skill .bar-skill-scss-dot {
   width: 10px;
   background: var(--light);
   left: calc(65% - 5px);
+  top: -2.5px;
+  transform: rotate(45deg);
+}
+aside .bar-skill .bar-skill-js-dot {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background: var(--light);
+  left: calc(15% - 5px);
   top: -2.5px;
   transform: rotate(45deg);
 }
@@ -275,6 +316,9 @@ aside .social-container:hover .fa-linkedin {
 }
 aside .social-container:hover .fa-twitter {
   color: #00acee;
+}
+aside .social-container:hover .fa-discord {
+  color: #5865f2;
 }
 
 main .pitchs {
